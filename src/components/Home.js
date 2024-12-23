@@ -24,7 +24,7 @@ function Home() {
       <Sidebar />
 
       {/* Main content */}
-      <div className="flex-1 h-[calc(100vh-6.625rem)] overflow-y-auto">
+      <div className="flex-1  h-[calc(100vh-6.625rem)] overflow-y-auto">
         <ListItems />
 
         {/* Videos Grid */}

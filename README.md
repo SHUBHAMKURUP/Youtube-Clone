@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# YouTube Clone Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern YouTube clone built with React and TailwindCSS, replicating the core functionality of YouTube, such as video browsing, search, and user interaction. The project aims to provide a clean and responsive interface with scalable design principles.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Responsive Design**: Fully optimized for desktops, tablets, and mobile devices.
+- **Search Functionality**: Users can search for videos dynamically.
+- **Sidebar Navigation**: Includes a toggleable sidebar for quick navigation between categories.
+- **Dynamic Video Rendering**: Displays videos fetched from a YouTube Data API v3.
+- **Dark/Light Mode (Planned)**: A planned enhancement to allow users to switch themes.
+- **Global State Management**: Utilizes the React Context API to manage the application state efficiently.
 
-### `npm start`
+## Technology Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend Framework**: React (Create React App)
+- **Styling**: TailwindCSS
+- **State Management**: Context API
+- **Routing**: React Router DOM
+- **Icons**: React Icons
+- **API**: Integrated with YouTube Data API v3
+- **Bundler**: Webpack (CRA)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Make sure you have the following installed:
 
-### `npm run build`
+- Node.js (v14 or above)
+- npm (or yarn)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Steps
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/SHUBHAMKURUP/Youtube-Clone.git
+   cd Youtube-Clone
+   ```
+2. **Install dependencies**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. **Configure API key**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   - Obtain a YouTube Data API key from the Google Cloud Console.
+   - Create a .env file in the root directory of the project.
+   - Add the following line to the .env file:
+     ```env
+     REACT_APP_YOUTUBE_API_KEY=your-api-key
+     ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Run the application**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm run start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. **Access the application**:
+   - Open your browser and navigate to the local URL, typically http://localhost:3000.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Future Enhancements:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Dark Mode**: Add support for light and dark themes.
+- **Backend Integration**: Fetch video data dynamically from the YouTube Data API.
+- **User Authentication**: Allow users to log in and personalize their experience.
+- **Video Player**: Embed a custom video player for enhanced viewing.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Acknowledgments
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Inspired by the YouTube platform.
+- Built with React, TailwindCSS, and YouTube Data API v3.
