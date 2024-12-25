@@ -6,7 +6,7 @@ A modern YouTube clone built with React and TailwindCSS, replicating the core fu
 
 - **Responsive Design**: Fully optimized for desktops, tablets, and mobile devices.
 - **Search Functionality**: Users can search for videos dynamically.
-- **Sidebar Navigation**: Includes a toggleable sidebar for quick navigation between categories.
+- **Sidebar Navigation**: Includes a collapsible sidebar for quick navigation between categories.
 - **Dynamic Video Rendering**: Displays videos fetched from a YouTube Data API v3.
 - **Dark/Light Mode (Planned)**: A planned enhancement to allow users to switch themes.
 - **Global State Management**: Utilizes the React Context API to manage the application state efficiently.

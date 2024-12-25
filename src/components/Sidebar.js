@@ -1,16 +1,15 @@
 import React from "react";
-
-import { Link } from "react-router-dom";
-
 import { GoHome } from "react-icons/go";
 import { MdOutlineSubscriptions, MdHistory } from "react-icons/md";
-
 import { IoGameControllerOutline } from "react-icons/io5";
 import { AiOutlineLike } from "react-icons/ai";
 import { FaChevronRight } from "react-icons/fa6";
+// cspell: disable-next-line
 import { SiYoutubestudio } from "react-icons/si";
+// cspell: disable-next-line
 import { SiYoutubekids } from "react-icons/si";
 import { MdOutlineWatchLater } from "react-icons/md";
+// cspell: disable-next-line
 import { SiYoutubemusic } from "react-icons/si";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { PiFilmSlateLight } from "react-icons/pi";
@@ -20,21 +19,16 @@ import { PiLightbulbLight } from "react-icons/pi";
 import { SiStylelint } from "react-icons/si";
 import { MdPodcasts } from "react-icons/md";
 import { BiNews, BiVideo } from "react-icons/bi";
-import { GiLinkedRings } from "react-icons/gi";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { LiaFireAltSolid } from "react-icons/lia";
 import { PiMusicNoteLight } from "react-icons/pi";
-import { CiSettings } from "react-icons/ci";
-import { MdOutlineOutlinedFlag } from "react-icons/md";
-import { IoIosHelpCircleOutline } from "react-icons/io";
-import { MdOutlineFeedback } from "react-icons/md";
 import { MdHome } from "react-icons/md";
+// cspell: disable-next-line
 import { SiYoutubeshorts } from "react-icons/si";
-
 import { CiYoutube } from "react-icons/ci";
 import { useSidebar } from "../context/SidebarContext";
 const Sidebar = () => {
-  const { isSidebarOpen, toggleSidebar } = useSidebar();
+  const { isSidebarOpen } = useSidebar();
 
   const sidebarItems = [
     {
@@ -45,6 +39,8 @@ const Sidebar = () => {
     {
       id: 2,
       name: "Shorts",
+
+      // cspell: disable-next-line
       icon: <SiYoutubeshorts />,
     },
     {
@@ -151,16 +147,19 @@ const Sidebar = () => {
     {
       id: 1,
       name: "Youtube Studio",
+      // cspell: disable-next-line
       icon: <SiYoutubestudio />,
     },
     {
       id: 2,
       name: "Youtube Music",
+      // cspell: disable-next-line
       icon: <SiYoutubemusic />,
     },
     {
       id: 3,
       name: "Youtube Kids",
+      // cspell: disable-next-line
       icon: <SiYoutubekids />,
     },
   ];
@@ -174,6 +173,7 @@ const Sidebar = () => {
     {
       id: 2,
       name: "Shorts",
+      // cspell: disable-next-line
       icon: <SiYoutubeshorts />,
     },
     {
@@ -184,6 +184,7 @@ const Sidebar = () => {
     {
       id: 4,
       name: "Youtube Music",
+      // cspell: disable-next-line
       icon: <SiYoutubemusic />,
     },
     {
@@ -285,6 +286,7 @@ const Sidebar = () => {
             works <br /> Test new features
           </span>
           <br />
+          {/* cspell: disable-next-line */}
           <p className="text-xs text-gray-500 mt-3">© 2024 Shubham Kurup</p>
         </div>
       ) : (

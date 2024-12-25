@@ -9,54 +9,53 @@ const Search = () => {
   const { searchQuery } = useParams();
 
   useEffect(() => {
+    const fetchSearchResults = async () => {
+      try {
+        // Step 1: Fetch videos from the search endpoint
+        const searchResponse = await fetchData("search", {
+          part: "snippet",
+          type: "video",
+          maxResults: 25,
+          q: searchQuery,
+        });
+
+        const videoIds = searchResponse.items
+          .map((item) => item.id.videoId)
+          .filter(Boolean)
+          .join(",");
+
+        if (!videoIds) {
+          console.error("No video IDs found.");
+          return;
+        }
+
+        // Step 2: Fetch video details for statistics and duration
+        const videosResponse = await fetchData("videos", {
+          part: "snippet,statistics,contentDetails",
+          id: videoIds,
+        });
+        console.log("videoResponse", videosResponse);
+        const combinedResults = videosResponse.items.map((video) => ({
+          id: video.id,
+          title: video.snippet.title,
+          description: video.snippet.description,
+          thumbnail: video.snippet.thumbnails.standard.url,
+          publishedAt: video.snippet.publishedAt,
+          channelTitle: video.snippet.channelTitle,
+          channelId: video.snippet.channelId,
+          views: video.statistics.viewCount,
+          duration: video.contentDetails.duration,
+        }));
+
+        setResults(combinedResults);
+      } catch (error) {
+        console.error("Error fetching search results:", error);
+      }
+    };
     if (searchQuery) {
       fetchSearchResults();
     }
   }, [searchQuery]);
-
-  const fetchSearchResults = async () => {
-    try {
-      // Step 1: Fetch videos from the search endpoint
-      const searchResponse = await fetchData("search", {
-        part: "snippet",
-        type: "video",
-        maxResults: 25,
-        q: searchQuery,
-      });
-
-      const videoIds = searchResponse.items
-        .map((item) => item.id.videoId)
-        .filter(Boolean)
-        .join(",");
-
-      if (!videoIds) {
-        console.error("No video IDs found.");
-        return;
-      }
-
-      // Step 2: Fetch video details for statistics and duration
-      const videosResponse = await fetchData("videos", {
-        part: "snippet,statistics,contentDetails",
-        id: videoIds,
-      });
-      console.log("videoResponse", videosResponse);
-      const combinedResults = videosResponse.items.map((video) => ({
-        id: video.id,
-        title: video.snippet.title,
-        description: video.snippet.description,
-        thumbnail: video.snippet.thumbnails.standard.url,
-        publishedAt: video.snippet.publishedAt,
-        channelTitle: video.snippet.channelTitle,
-        channelId: video.snippet.channelId,
-        views: video.statistics.viewCount,
-        duration: video.contentDetails.duration,
-      }));
-
-      setResults(combinedResults);
-    } catch (error) {
-      console.error("Error fetching search results:", error);
-    }
-  };
 
   return (
     <div className="flex flex-row mt-20 h-[calc(100%-40px)]">
