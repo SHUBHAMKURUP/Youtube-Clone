@@ -38,6 +38,9 @@ export default function AuthProvider({ children }) {
       });
       console.log("channel details API Data:", channelDetailsResponse);
 
+      /*
+      * Function fetchRelatedVideos is currently not in use.
+      
       const fetchRelatedVideos = async (videoId) => {
         try {
           const response = await fetchData("search", {
@@ -52,7 +55,7 @@ export default function AuthProvider({ children }) {
           console.error("Error fetching related videos:", error);
           return [];
         }
-      };
+      };*/
 
       const channelDetails = channelDetailsResponse.items.reduce(
         (acc, channel) => {
