@@ -22,13 +22,18 @@ function Video({ video }) {
     <div className="flex flex-col ">
       <Link to={`/video/${id}`}>
         {/* Thumbnail and duration */}
-        <div className="relative rounded-lg overflow-hidden group">
+        <div
+          className="relative rounded-lg overflow-hidden group"
+          style={{ paddingBottom: "56.25%" }}
+        >
           <img
-            className="w-full h-full aspect-ratio: 16 / 9 object-cover transition-transform aspect-auto group-hover:scale-105"
-            src={thumbnails?.maxres?.url}
+            className="absolute top-0 left-0 w-full h-full object-cover transition-transform group-hover:scale-105"
+            src={thumbnails?.maxres?.url || thumbnails?.default?.url}
             alt="Thumbnail"
           />
-          {duration && <Time time={duration} />}
+          {duration && moment.duration(duration).isValid() && (
+            <Time time={duration} />
+          )}
         </div>
 
         {/* Video details */}
