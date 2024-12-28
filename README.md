@@ -2,6 +2,10 @@
 
 A modern YouTube clone built with React and TailwindCSS, replicating the core functionality of YouTube, such as video browsing, search, and user interaction. The project aims to provide a clean and responsive interface with scalable design principles.
 
+## Demo
+
+Live demo link: https://youtubecnv3.netlify.app
+
 ## Features
 
 - **Responsive Design**: Fully optimized for desktops, tablets, and mobile devices.
