@@ -4,7 +4,7 @@ A modern YouTube clone built with React and TailwindCSS, replicating the core fu
 
 ## Demo
 
-Live demo link: https://youtubecnv3.netlify.app
+[Live demo](https://youtubecnv3.netlify.app)
 
 ## Features
 
